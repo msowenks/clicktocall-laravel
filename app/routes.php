@@ -57,7 +57,7 @@ Route::post('/outbound', function()
 
     $twiml = new Services_Twilio_Twiml();
     $twiml->say($sayMessage, array('voice' => 'alice'));
-    $response->dial('+13168541141');
+    //$response->dial('+13168541141');
 
     $response = Response::make($twiml, 200);
     $response->header('Content-Type', 'text/xml');
