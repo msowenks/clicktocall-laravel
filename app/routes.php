@@ -23,8 +23,8 @@ Route::post('/call', function()
     $number = Input::get('phoneNumber');
 
     // Set URL for outbound call - this should be your public server URL
-    $host = parse_url(Request::url(), PHP_URL_HOST);
-    $url = 'http://' . $host . '/outbound';
+    $host = 'bylyngo.mydevelopmentsite.net/pbx/twiml/applet/voice/3/start';//parse_url(Request::url(), PHP_URL_HOST);
+    $url = 'http://' . $host;
 
     // Create authenticated REST client using account credentials in
     // <project root dir>/.env.php
